@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Class051Example</title>
+</head>
+<h2> Users Email List Application</h2>
+<body>
+	<p> Please type user information</p>
+	<form action="#" th:action="@{/userInput}" th:object="${user}" method="post">
+		<p>User Name: <input type="text" th:field="*{name}" /></p>
+		<p>User Email: <input type="text" th:field="*{email}" /></p>
+		<p>User Phone: <input type="text" th:field="*{phone}" /></p>
+		<input type="submit" value="Submit" /> <br> <br>
+		<input type="reset" value="Reset" />
+	</form>
+	<br>
+	<a href = "/index" > Add another user</a>
+</body>
+</html>

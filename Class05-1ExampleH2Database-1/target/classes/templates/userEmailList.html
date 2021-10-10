@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Class051Example</title>
+</head>
+<h1>Users Email List as a table:</h1>
+	<h2> User Contact Information</h2>
+<body>
+	<p> User's Emial List: </p>
+ <table>
+		<tr>
+			<th>User Name</th>
+			<th>User Email</th>
+			<th>User Phone</th>
+		</tr>
+		<tr th:each="aUser:${users}">
+			<td th:text="${aUser.name}"></td>
+			<td th:text="${aUser.email}"></td>
+			<td th:text="${aUser.phone}"></td>
+		</tr>
+	</table>	
+     <br>
+     <a href="/userInput"> User Email List Application </a>
+    <br><br>
+     <a href="/index">Add another user</a>
+</body>
+</html>
